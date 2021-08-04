@@ -1,0 +1,28 @@
+.about {
+    color: $text-GrayBlue50;
+    padding-top: vh(95);
+    &__container {
+        text-align: center;
+    }
+    .row {
+        margin: vw(-15);
+    }
+    &-item {
+        margin: vw(15);
+        background: $bg-white;
+        padding: vw(60) vw(54) vw(38) vw(54);
+        border-radius: vw(10);
+        box-shadow: 0 vw(2) vw(5) rgba(54, 61, 77, 0.03);
+    }
+}
+
+.about__card-title {
+    @include font(vw(16), 600, vh(30));
+    text-align: center;
+}
+
+.about__card-text {
+    @include font(vw(16), 600, vh(25));
+    color: $text-GrayBlue70;
+    text-align: center;
+}

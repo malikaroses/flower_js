@@ -1,0 +1,57 @@
+.footer {
+    padding: vw(90) 0 0;
+    &__rights {
+        @include font(vw(13), 700, vw(25));
+        color: $text-GrayBlue70;
+    }
+    &__bottom {
+        padding: vw(48) 0 vw(42);
+        display: flex;
+        justify-content: space-between;
+        ul {
+            display: flex;
+            list-style: none;
+            li {
+                margin-left: vw(55);
+            }
+            a {
+                @include font(vw(13), 700, vw(25));
+                color: $text-GrayBlue70;
+            }
+        }
+    }
+    &__logo {
+        @include font(vw(24), 700, vw(30));
+        color: $text-GrayBlue50;
+        margin: 0;
+    }
+    &__reviews {
+        display: flex;
+        align-items: center;
+        span {
+            @include font(vw(14), 700, vw(30));
+            color: $text-GrayBlue70;
+            margin-right: vw(20);
+        }
+    }
+    &__rating {
+        margin-bottom: vw(20);
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        &__item {
+            width: 33.33%;
+            margin-bottom: vw(20);
+        }
+        &__link {
+            @include font(vw(13), 700, vw(25));
+            color: $text-GrayBlue70;
+        }
+    }
+    &__row {
+        justify-content: space-between;
+        padding-bottom: vw(65);
+    }
+}

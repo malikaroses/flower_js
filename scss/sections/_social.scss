@@ -1,0 +1,52 @@
+.social {
+    text-align: center;
+    height: 100%;
+    padding-bottom: vw(125);
+    .row {
+        display: flex !important;
+    }
+    .slick-prev.slick-arrow,
+    .slick-next.slick-arrow {
+        position: absolute;
+        left: 0;
+        top: vw(-210);
+        width: vw(60);
+        height: vw(60);
+        background-color: $bg-white;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        box-shadow: 0px vw(2) vw(5) rgba(54, 61, 77, 0.05);
+        font-size: 0;
+        background: $bg-white url('../img/arrow.svg') center center no-repeat;
+        cursor: pointer;
+        transform: rotate(180deg);
+    }
+    .slick-next.slick-arrow {
+        left: auto;
+        right: 0;
+        transform: rotate(0);
+    }
+    .title {
+        margin-bottom: vw(165);
+    }
+    &-item {
+        position: relative;
+        padding: vw(15);
+        &_link {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: vw(80);
+            height: vw(80);
+            transform: translate(-50%, -50%) scale(0);
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: vw(120);
+            transition: 0.3s;
+            @include flex();
+        }
+        &:hover &_link {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+}

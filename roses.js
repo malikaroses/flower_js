@@ -1,0 +1,1 @@
+let names = ['rose', 'lika', 'mirai']

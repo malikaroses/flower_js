@@ -1,0 +1,1239 @@
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/SF-Pro-Display-Bold.woff") format("woff");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/SF-Pro-Display-Semibold.woff") format("woff");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/SF-Pro-Display-Medium.woff") format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/SF-Pro-Display-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+.header {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding-top: 6.64062vh;
+}
+
+.header__row {
+  display: flex;
+  align-items: center;
+}
+
+.burger {
+  margin-right: 2.5vw;
+}
+
+.burger span {
+  position: relative;
+  display: inline-block;
+  width: 1.125vw;
+  height: 0.125vw;
+  border-radius: 0.1875vw;
+  background-color: #ffffff;
+}
+
+.burger span::before, .burger span::after {
+  content: '';
+  position: absolute;
+  transform: translateY(-0.3125vw);
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+}
+
+.burger span::after {
+  transform: translateY(0.3125vw);
+}
+
+.logo {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25vw;
+  line-height: 2.92969vh;
+  color: #ffffff;
+  margin-right: 7.1875vw;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-right: 3.125vw;
+}
+
+.search svg {
+  width: 1.125vw;
+}
+
+.search input {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.875vw;
+  line-height: 2.92969vh;
+  margin-left: 1.625vw;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+}
+
+.nav__list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  margin-right: 2.125vw;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.8125vw;
+  line-height: 2.44141vh;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.call {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.8125vw;
+  line-height: 2.44141vh;
+  margin-left: 12.1875vw;
+  text-decoration: none;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding-top: 2.66667vmin;
+  }
+  .header__row {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  .header .nav,
+  .header .call {
+    display: none;
+  }
+  .header .burger span {
+    width: 4.8vmin;
+    height: 0.53333vmin;
+    min-width: 18px;
+    min-height: 2px;
+    border-radius: 0.8vmin;
+  }
+  .header .burger span::before, .header .burger span::after {
+    transform: translateY(-1.33333vmin);
+  }
+  .header .burger span::after {
+    transform: translateY(1.33333vmin);
+  }
+  .header .logo {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5.33333vmin;
+    line-height: 8vmin;
+    margin-right: 30.66667vmin;
+  }
+  .header .search {
+    display: none;
+  }
+}
+
+.hero {
+  background: url("../img/herobg.png") no-repeat;
+  background-size: cover;
+  background-position: center -8.6875vw;
+  height: 100vh;
+  position: relative;
+}
+
+.hero__content {
+  padding-top: 21.48438vh;
+  max-width: 43.75vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero__link {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.75vw;
+  line-height: 1.95312vh;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #E62E7B;
+  border-radius: 2.92969vh;
+  padding: 0.3125vw 1vw;
+}
+
+.hero__title {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4vw;
+  line-height: 8.78906vh;
+  margin: 6.54297vh 0 6.64062vh;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero__title {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.06667vmin;
+    line-height: 24vmin;
+    margin: 17.86667vmin 0 18.13333vmin;
+  }
+}
+
+.hero-list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 15.625vh;
+}
+
+.hero-list__item {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875vw;
+  line-height: 2.92969vh;
+  margin-right: 1.46484vh;
+  color: #ffffff;
+  position: relative;
+}
+
+.hero-list__item::after {
+  content: "x";
+  position: absolute;
+  right: -1.07422vh;
+}
+
+.hero-list__item:last-child::after {
+  display: none;
+}
+
+.hero-info {
+  display: flex;
+  color: #ffffff;
+  list-style-type: none;
+  text-align: left;
+  padding-left: 0;
+}
+
+.hero-info__item {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.8125vw;
+  line-height: 1.5625vw;
+  color: #ffffff;
+  margin-right: 6.15234vh;
+  display: flex;
+}
+
+.hero-info__item:last-child {
+  margin-right: 0;
+}
+
+.hero-info__item img {
+  margin-right: 2.5vw;
+  width: 1.66016vh;
+}
+
+.hero__anchor {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875vw;
+  line-height: 2.92969vh;
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #4D5E80;
+  padding: 1.46484vh 2.92969vh;
+  background-color: #ffffff;
+  box-shadow: 0px 0.97656vh 2.92969vh rgba(54, 61, 77, 0.25);
+  border-radius: 2.92969vh;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero__content {
+    padding-top: 29.33333vmin;
+    max-width: 100%;
+  }
+  .hero__anchor {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.73333vmin;
+    line-height: 8vmin;
+    padding: 4vmin 8vmin;
+    box-shadow: 0px 2.66667vmin 8vmin rgba(54, 61, 77, 0.25);
+    border-radius: 8vmin;
+  }
+  .hero__link {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3.2vmin;
+    line-height: 5.33333vmin;
+    border-radius: 8vmin;
+    padding: 1.33333vmin 4.26667vmin;
+  }
+  .hero-list {
+    margin-bottom: 21.33333vmin;
+  }
+  .hero-list__item {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.73333vmin;
+    line-height: 8vmin;
+    margin-right: 4vmin;
+  }
+  .hero-list__item::after {
+    right: -2.93333vmin;
+  }
+  .hero__item {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.46667vmin;
+    line-height: 6.66667vmin;
+    margin-right: 16.8vmin;
+  }
+  .hero__item img {
+    margin-right: 10.66667vmin;
+    width: 4.53333vmin;
+  }
+}
+
+.about {
+  color: #4D5E80;
+  padding-top: 9.27734vh;
+}
+
+.about__container {
+  text-align: center;
+}
+
+.about .row {
+  margin: -0.9375vw;
+}
+
+.about-item {
+  margin: 0.9375vw;
+  background: #ffffff;
+  padding: 3.75vw 3.375vw 2.375vw 3.375vw;
+  border-radius: 0.625vw;
+  box-shadow: 0 0.125vw 0.3125vw rgba(54, 61, 77, 0.03);
+}
+
+.about__card-title {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1vw;
+  line-height: 2.92969vh;
+  text-align: center;
+}
+
+.about__card-text {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1vw;
+  line-height: 2.44141vh;
+  color: #7D8FB3;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .about .row {
+    margin: -4vmin;
+  }
+  .about-item {
+    margin: 4vmin;
+    padding: 16vmin 14.4vmin 10.13333vmin 14.4vmin;
+    border-radius: 2.66667vmin;
+    box-shadow: 0 0.53333vmin 1.33333vmin rgba(54, 61, 77, 0.03);
+  }
+  .about .about__card-title {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4.26667vmin;
+    line-height: 8vmin;
+  }
+  .about .about__card-text {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4.26667vmin;
+    line-height: 6.66667vmin;
+  }
+}
+
+.service {
+  padding: 7.8125vw;
+}
+
+.service__row {
+  position: relative;
+  margin-bottom: 7.8125vw;
+}
+
+.service__row:last-child {
+  margin-bottom: 0;
+}
+
+.service__row .bg-text {
+  transform: translateY(40%);
+  right: 0;
+}
+
+.service-item.service-item__image {
+  position: relative;
+  padding: 3.125vw;
+  min-height: 21.875vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-item.service-item__image img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 21.875vw;
+  z-index: -1;
+  border-radius: 0.625vw;
+}
+
+.service-item.service-item__image .play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.875vw;
+  width: 3.75vw;
+  height: 3.75vw;
+  background-color: #E62E7B;
+  box-shadow: 0 0.625vw 1.875vw #E62E7B;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.service-item.service-item__image .play svg,
+.service-item.service-item__image .play svg path {
+  transition: 0.3s;
+}
+
+.service-item.service-item__image .play:hover {
+  background: #ffffff;
+  box-shadow: 0 0.625vw 1.875vw #ffffff;
+}
+
+.service-item.service-item__image .play:hover svg path {
+  fill: #E62E7B;
+}
+
+.service-item.service-item__image .play:hover svg {
+  transform: rotate(360deg);
+}
+
+.service-item.service-item__image .service-item__subtitle {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1vw;
+  line-height: 1.875vw;
+  color: #ffffff;
+}
+
+.service-item {
+  padding: 0 7.8125vw;
+}
+
+.service-item__title {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.25vw;
+  line-height: 3.75vw;
+  color: #4d5e80;
+}
+
+.service-item__link {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1vw;
+  line-height: 1.875vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #6b7a99;
+}
+
+.service-item__link svg {
+  margin-left: 3.4375vw;
+}
+
+.service .next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 3.125vw;
+  right: 3.125vw;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 1.875vw;
+  width: 3.75vw;
+  height: 3.75vw;
+  cursor: pointer;
+}
+
+.service .next svg {
+  transition: 0.2s;
+}
+
+.service .next:hover svg {
+  transform: translateX(0.3125vw);
+}
+
+@media screen and (max-width: 1024px) {
+  .service__row {
+    margin-bottom: 33.33333vmin;
+  }
+  .service-item.service-item__image {
+    padding: 6.66667vmin;
+    min-height: 93.33333vmin;
+  }
+  .service-item.service-item__image img {
+    height: 93.33333vmin;
+    border-radius: 2.66667vmin;
+  }
+  .service-item.service-item__image .play {
+    border-radius: 8vmin;
+    width: 16vmin;
+    height: 16vmin;
+    box-shadow: 0 2.66667vmin 8vmin #E62E7B;
+  }
+  .service-item.service-item__image .play:hover {
+    box-shadow: 0 2.66667vmin 8vmin #ffffff;
+  }
+  .service-item.service-item__image .service-item__subtitle {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4.26667vmin;
+    line-height: 8vmin;
+  }
+  .service-item {
+    padding: 0 33.33333vmin;
+  }
+  .service-item__title {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.8vmin;
+    line-height: 8vmin;
+  }
+  .service-item__link {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.26667vmin;
+    line-height: 8vmin;
+  }
+  .service-item__link svg {
+    margin-left: 14.66667vmin;
+  }
+  .service .next {
+    bottom: 13.33333vmin;
+    right: 13.33333vmin;
+    border-radius: 8vmin;
+    width: 16vmin;
+    height: 16vmin;
+  }
+  .service .next:hover svg {
+    transform: translateX(1.33333vmin);
+  }
+}
+
+.catalog {
+  text-align: center;
+  height: 100%;
+}
+
+.catalog-item {
+  position: relative;
+  background-color: #ffffff;
+  padding: 2vw 0 0 0;
+  box-sizing: border-box;
+}
+
+.catalog-item__title {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.8125vw;
+  line-height: 1.5625vw;
+  color: #6B7A99;
+}
+
+.catalog-item__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 3.75vw;
+  border: 0.1875vw solid #f5f6f7;
+}
+
+.catalog-item__icon {
+  position: absolute;
+  right: 1.625vw;
+  top: 1.625vw;
+  cursor: pointer;
+}
+
+.catalog-item__rating {
+  width: 33.33%;
+  display: flex;
+  align-items: center;
+  margin-left: 1.75vw;
+}
+
+.catalog-item__rating span {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.8125vw;
+  line-height: 1.5625vw;
+  color: #6B7A99;
+  margin-left: 0.4375vw;
+}
+
+.catalog-item__price {
+  margin-top: -0.125vw;
+  margin-bottom: -0.15625vw;
+  width: 33.33%;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.8125vw;
+  line-height: 1.5625vw;
+  color: #6B7A99;
+  align-self: stretch;
+  border: 0.1875vw solid #f5f6f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.catalog-item__buy {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.8125vw;
+  line-height: 1.5625vw;
+  position: relative;
+  color: #E62E7B;
+  align-self: stretch;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 33.33%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.catalog-item__buy::before {
+  content: "";
+  position: absolute;
+  right: -100%;
+  bottom: 0;
+  background-color: #E62E7B;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.catalog-item__buy:hover {
+  color: #ffffff;
+}
+
+.catalog-item__buy:hover::before {
+  right: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .catalog-item {
+    padding: 8.53333vmin 0 0 0;
+  }
+  .catalog-item__title {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.46667vmin;
+    line-height: 6.66667vmin;
+  }
+  .catalog-item__bottom {
+    min-height: 16vmin;
+    border: 0.8vmin solid #f5f6f7;
+  }
+  .catalog-item__icon {
+    right: 6.93333vmin;
+    top: 6.93333vmin;
+  }
+  .catalog-item__rating {
+    margin-left: 7.46667vmin;
+  }
+  .catalog-item__rating span {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.46667vmin;
+    line-height: 6.66667vmin;
+    margin-left: 1.86667vmin;
+  }
+  .catalog-item__price {
+    margin-top: -0.53333vmin;
+    margin-bottom: -0.66667vmin;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.46667vmin;
+    line-height: 6.66667vmin;
+    border: 0.8vmin solid #f5f6f7;
+  }
+  .catalog-item__buy {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.46667vmin;
+    line-height: 6.66667vmin;
+  }
+}
+
+.location {
+  padding-top: 7.5vw;
+}
+
+.location ul {
+  list-style-type: none;
+}
+
+.location__top {
+  text-align: center;
+}
+
+.location__map {
+  position: relative;
+}
+
+.location__map .map {
+  height: 33.75vw;
+}
+
+.location-modal {
+  position: absolute;
+  right: 2.5vw;
+  bottom: 2.5vw;
+  padding: 3.4375vw;
+  background-color: #ffffff;
+}
+
+.location-modal img {
+  margin-right: 2.25vw;
+  width: 1.25vw;
+  height: 1.25vw;
+}
+
+.location-modal__item {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.8125vw;
+  line-height: 1.5625vw;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5625vw;
+  color: #6B7A99;
+}
+
+.location-modal__item:last-child {
+  align-items: flex-start;
+  margin-bottom: 0;
+}
+
+.location-modal__item:last-child span:first-child {
+  color: #C3CAD9;
+}
+
+.location-modal__item span + span {
+  margin-left: 0.9375vw;
+}
+
+@media screen and (max-width: 1024px) {
+  .location .map {
+    height: 72vmin;
+  }
+  .location-modal {
+    right: 5.33333vmin;
+    bottom: 5.33333vmin;
+    padding: 7.25333vmin;
+  }
+  .location-modal img {
+    margin-right: 4.8vmin;
+    width: 2.66667vmin;
+    height: 2.66667vmin;
+  }
+  .location-modal__item {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.73333vmin;
+    line-height: 3.33333vmin;
+    margin-bottom: 3.33333vmin;
+  }
+  .location-modal__item span + span {
+    margin-left: 4vmin;
+  }
+}
+
+.social {
+  text-align: center;
+  height: 100%;
+  padding-bottom: 7.8125vw;
+}
+
+.social .row {
+  display: flex !important;
+}
+
+.social .slick-prev.slick-arrow,
+.social .slick-next.slick-arrow {
+  position: absolute;
+  left: 0;
+  top: -13.125vw;
+  width: 3.75vw;
+  height: 3.75vw;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0.125vw 0.3125vw rgba(54, 61, 77, 0.05);
+  font-size: 0;
+  background: #ffffff url("../img/arrow.svg") center center no-repeat;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.social .slick-next.slick-arrow {
+  left: auto;
+  right: 0;
+  transform: rotate(0);
+}
+
+.social .title {
+  margin-bottom: 10.3125vw;
+}
+
+.social-item {
+  position: relative;
+  padding: 0.9375vw;
+}
+
+.social-item_link {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 5vw;
+  height: 5vw;
+  transform: translate(-50%, -50%) scale(0);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 7.5vw;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-item:hover .social-item_link {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media screen and (max-width: 1024px) {
+  .social .slick-prev.slick-arrow,
+  .social .slick-next.slick-arrow {
+    top: -56vmin;
+    width: 16vmin;
+    height: 16vmin;
+    box-shadow: 0px 0.53333vmin 1.33333vmin rgba(54, 61, 77, 0.05);
+  }
+  .social .title {
+    margin-bottom: 22vmin;
+  }
+  .social-item {
+    padding: 4vmin;
+  }
+  .social-item_link {
+    width: 21.33333vmin;
+    height: 21.33333vmin;
+    border-radius: 32vmin;
+  }
+}
+
+.footer {
+  padding: 5.625vw 0 0;
+}
+
+.footer__rights {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.8125vw;
+  line-height: 1.5625vw;
+  color: #7D8FB3;
+}
+
+.footer__bottom {
+  padding: 3vw 0 2.625vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__bottom ul {
+  display: flex;
+  list-style: none;
+}
+
+.footer__bottom ul li {
+  margin-left: 3.4375vw;
+}
+
+.footer__bottom ul a {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.8125vw;
+  line-height: 1.5625vw;
+  color: #7D8FB3;
+}
+
+.footer__logo {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5vw;
+  line-height: 1.875vw;
+  color: #4D5E80;
+  margin: 0;
+}
+
+.footer__reviews {
+  display: flex;
+  align-items: center;
+}
+
+.footer__reviews span {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875vw;
+  line-height: 1.875vw;
+  color: #7D8FB3;
+  margin-right: 1.25vw;
+}
+
+.footer__rating {
+  margin-bottom: 1.25vw;
+}
+
+.footer-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.footer-list__item {
+  width: 33.33%;
+  margin-bottom: 1.25vw;
+}
+
+.footer-list__link {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.8125vw;
+  line-height: 1.5625vw;
+  color: #7D8FB3;
+}
+
+.footer__row {
+  justify-content: space-between;
+  padding-bottom: 4.0625vw;
+}
+
+body {
+  margin: 0;
+  font-family: "SF Pro Display";
+  background: #e5e5e5;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+h1,
+h2,
+p,
+div,
+span {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 69.375vw;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bg-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12.5vw;
+  line-height: 13.75vw;
+  z-index: -1;
+  color: #002881;
+  opacity: 0.03;
+}
+
+@media screen and (max-width: 1024px) {
+  .bg-text {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26.66667vmin;
+    line-height: 29.33333vmin;
+  }
+}
+
+.pink-btn {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.75vw;
+  line-height: 1.95312vh;
+  padding: 0.48828vh 1.66016vh;
+  background: rgba(230, 46, 123, 0.1);
+  border-radius: 2.92969vh;
+  color: #E62E7B;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .pink-btn {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3.2vmin;
+    line-height: 5.33333vmin;
+    padding: 1.33333vmin 4.53333vmin;
+    border-radius: 8vmin;
+  }
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.title {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.25vw;
+  line-height: 5.85938vh;
+  position: relative;
+  margin: 4.0625vw 0 4.0625vw;
+  color: #4D5E80;
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9.6vmin;
+    line-height: 16vmin;
+    margin: 17.33333vmin 0 17.33333vmin;
+  }
+}
+
+.title__bg-text {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12.5vw;
+  line-height: 13.75vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  color: #002881;
+  opacity: 0.03;
+}
+
+@media screen and (max-width: 1024px) {
+  .title__bg-text {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26.66667vmin;
+    line-height: 29.33333vmin;
+  }
+}
+
+.text {
+  display: inline-block;
+  width: 40vw;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.875vw;
+  line-height: 1.875vw;
+  padding-bottom: 4.375vw;
+  color: #7D8FB3;
+}
+
+@media screen and (max-width: 1024px) {
+  .text {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.73333vmin;
+    line-height: 8vmin;
+    padding-bottom: 18.66667vmin;
+    width: 85.33333vmin;
+  }
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.badge {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.75vw;
+  line-height: 1.25vw;
+  color: #ff6633;
+  background-color: rgba(255, 102, 51, 0.1);
+  border: none;
+  outline: none;
+  border-radius: 1.875vw;
+  padding: 0.3125vw 0.75vw;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .badge {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3.2vmin;
+    line-height: 5.33333vmin;
+    border-radius: 8vmin;
+    padding: 1.33333vmin 3.2vmin;
+  }
+}
+
+.badge_orange {
+  color: #ff6633;
+  background-color: rgba(255, 102, 51, 0.1);
+}
+
+.badge_pink {
+  background: rgba(230, 46, 123, 0.1);
+  color: #E62E7B;
+}
+
+hr {
+  border-color: #EDEFF2;
+  margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .col-3,
+  .col-4,
+  .col-6 {
+    width: 100%;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0 8vmin;
+  }
+}
